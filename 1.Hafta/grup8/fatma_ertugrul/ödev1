@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int main() {
+float ilk_deger,ikinci_deger,sonuc;
+char islem,trash;
+
+do {
+printf("ilk sayiyi girin: ");
+scanf("%f",&ilk_deger);
+
+printf("ikinci sayiyi girin: ");
+scanf("%f",&ikinci_deger);
+
+printf("yapilacak islemi girin");
+scanf("%c",&trash);
+scanf("%c",&islem);
+if(islem=='+') {
+
+sonuc=ilk_deger+ikinci_deger;
+}
+else if (islem=='-') {
+sonuc=ilk_deger-ikinci_deger; }
+else if (islem=='*') {
+sonuc=ilk_deger*ikinci_deger; }
+else if(islem=='/') {
+if(ikinci_deger!=0) {
+sonuc=ilk_deger/ikinci_deger; }
+else{ 
+islem=='c';
+printf("sifira bolme hatasi");
+}
+} else if (islem=='c') {
+printf("cikis yapiliyor"); }
+if (islem=='+'||islem=='-'||islem=='/'||islem=='*') {
+	
+printf("%f\n",sonuc);
+}
+}
+
+while(islem!='c'); 
+}
