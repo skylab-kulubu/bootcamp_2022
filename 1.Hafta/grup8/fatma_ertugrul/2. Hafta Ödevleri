@@ -1,0 +1,85 @@
+                                      //İLK SORU
+#include <stdio.h>
+
+int main(){
+	int*diziPtr;
+	int i,N,tmp;
+	
+	printf("lutfen dizinin boyutunu giriniz");
+	scanf("%d",&N);
+	
+	diziPtr = (int*)malloc(N*sizeof(int));
+	// malloc bize ramda ihtiyaç duyduğumuz kadar bir alan ayırıyor
+	
+	for(i=0;i<N;i++){
+		printf("dizinin %d. degerini girin:",i+1);
+		scanf("%d",&diziPtr[i]);
+	}
+	printf("dizi: ");
+	for(i=0;i<N;i++){
+		printf("%d",diziPtr[i]);
+		
+	}
+		
+
+//ÇIKTI: lutfen dizinin boyutunu giriniz 3
+//dizinin 1. degerini girin:1
+//dizinin 2. degerini girin:3
+//dizinin 3. degerini girin:2
+//dizi: 132
+	
+printf("\dizinin ters hali:");
+for(i=0;i<N/2;i++) {
+	tmp=*(diziPtr+i);
+	*(diziPtr+i)=*(diziPtr+N-1-i);
+	*(diziPtr+N-1-i)=tmp;
+}
+
+for(i=0;i<N;i++){
+	printf("%d",diziPtr[i]);
+	
+}
+
+
+return 0;
+
+}
+
+                                       //İKİNCİ SORU
+                          
+
+#include <stdio.h>
+void fibonacci(int N,int ilk_sayi,int ikinci_sayi){
+
+//SORU 2
+//kullanıcının girdiği sayı adedi kadar fibonacci çıktısı recursive fonk.la yaz
+
+
+int main() {
+
+int ilk_sayi=0;
+ int ikinci_sayi=1;
+  int N;
+
+printf("kacinci fibonacci sayisina kadar eklensin?");
+scanf("%d",&N);
+fibonacci (N,ilk_sayi,ikinci_sayi);
+
+
+
+
+return 0;
+}
+void fibonacci(int N,int ilk_sayi,int ikinci_sayi){
+	static int i=0;
+	//fonksiyon çalışıp bittiğinde içindeki değer atanan veri de kaybolur ama static yazdığımızda bu i hep 0 olarak kalıcak
+	if(i<N){
+		i++
+		printf("%d",ilk_sayi);
+		//burada hata gösteriyor ama neden anlayamadım
+		fibonacci(N,ikinci_sayi,ilk_sayi+ikinci_Sayi);
+		//ikinci sayıyı ilk sayının yerine gönderdik ikinci sayının yerine de toplamlarını gönderdik.
+		//recursive fonk.larda yazdığımız kod daha kısa olur ve hızlı işler,
+//fonksyionlar, işlem bitene kadar ramde tutuluyolar,
+}
+}
