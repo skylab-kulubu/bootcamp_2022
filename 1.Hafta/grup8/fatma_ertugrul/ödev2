@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+
+int ilk_sayi=0,ikinci_sayi=1,N,i,tmp;
+
+printf("kacinci fibonacci sayisina kadar eklensin?");
+scanf("%d",&N);
+
+if( N>0) { 
+
+for(i=0;i<N;i++) {
+printf("%d\t",ilk_sayi);
+
+tmp=ilk_sayi;
+ilk_sayi=ikinci_sayi;
+ikinci_sayi+=tmp;
+
+}
+}
+
+return 0;
+}
