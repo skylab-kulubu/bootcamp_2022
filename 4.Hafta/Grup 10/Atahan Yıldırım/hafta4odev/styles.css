@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(156, 192, 209);
+    position: absolute;
+    left: 40%;
+    padding: 10px;
+}
+
+.List{
+    background-color: rgb(124, 183, 210);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 20px;
+    padding: 7px;
+}
